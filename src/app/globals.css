@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', system-ui, sans-serif;
+    --font-playfair: 'Playfair Display', Georgia, serif;
+  }
+
+  body {
+    @apply bg-balaio-beige text-balaio-dark antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .btn-primary {
+    @apply inline-block px-8 py-3 bg-balaio-green text-white font-medium tracking-wide hover:bg-opacity-90 transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply inline-block px-8 py-3 border-2 border-balaio-green text-balaio-green font-medium tracking-wide hover:bg-balaio-green hover:text-white transition-all duration-300;
+  }
+}
+
+/* Animações suaves */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
