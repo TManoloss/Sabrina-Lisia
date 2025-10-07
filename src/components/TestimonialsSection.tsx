@@ -18,21 +18,21 @@ const testimonials: Testimonial[] = [
     quote: "A casa na praia sempre foi um sonho de criança e, ao falar com a Sabrina, parecia que nos conhecíamos desde essa época. As conversas para o projeto foram sensacionais e a obra foi conduzida com maestria! Obrigado por ajudarem a realizar meu sonho.",
     author: "Michel",
     project: "Casa Barra do Una",
-    images: ['/images/testimonial-1a.jpg', '/images/testimonial-1b.jpg'],
+    images: ['/renders/sala-praia/sala-praia-1.png', '/renders/sala-praia/sala-praia-2.png'],
   },
   {
     id: 2,
     quote: "Projeto surpreendente e maravilhoso realizado pela Sabrina! A cada dia sentimos que os espaços cumprem bem seus propósitos, tudo foi pensado de acordo com as nossas necessidades. Deixamos aqui nossos agradecimento à toda Equipe e aos profissionais envolvidos!",
     author: "Ingrid e Raul",
     project: "Apartamento Vila Leopoldina",
-    images: ['/images/testimonial-2a.jpg', '/images/testimonial-2b.jpg'],
+    images: ['/renders/suite-freijo/suite-freijo-1.png', '/renders/suite-freijo/suite-freijo-2.png'],
   },
   {
     id: 3,
     quote: "A parceria com a Sabrina foi ótima! Sempre aberta a troca de ideias e trazendo soluções criativas excelentes e de muito bom gosto! O resultado superou nossas expectativas.",
     author: "João",
     project: "Apartamento Nord",
-    images: ['/images/testimonial-3a.jpg', '/images/testimonial-3b.jpg'],
+    images: ['/renders/banheiro/banheiro-1.png', '/renders/banheiro/banheiro-2.png'],
   },
 ];
 
@@ -79,14 +79,14 @@ export default function TestimonialsSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-balaio-dark/10 to-transparent z-10" />
                   {/* Placeholder */}
                   <div className="w-full h-full bg-gradient-to-br from-balaio-green/30 to-balaio-beige" />
-                  {/* Descomente quando tiver as imagens:
+                  
                   <Image
                     src={currentTestimonial.images[0]}
                     alt={`${currentTestimonial.project} - Imagem 1`}
                     fill
                     className="object-cover"
                   />
-                  */}
+                  
                 </div>
 
                 {/* Imagem 2 */}
@@ -94,14 +94,14 @@ export default function TestimonialsSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-balaio-dark/10 to-transparent z-10" />
                   {/* Placeholder */}
                   <div className="w-full h-full bg-gradient-to-br from-balaio-beige to-balaio-green/30" />
-                  {/* Descomente quando tiver as imagens:
+                 
                   <Image
                     src={currentTestimonial.images[1]}
                     alt={`${currentTestimonial.project} - Imagem 2`}
                     fill
                     className="object-cover"
                   />
-                  */}
+                  
                 </div>
               </div>
 

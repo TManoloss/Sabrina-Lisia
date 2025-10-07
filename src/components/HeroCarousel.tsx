@@ -82,9 +82,9 @@ export default function HeroCarousel() {
               className="font-serif text-4xl md:text-6xl lg:text-7xl mb-6 text-balaio-dark leading-tight"
             >
               ESCRITÓRIO DE<br />
-              ARQUITETURA,<br />
-              URBANISMO<br />
-              E DESIGN
+              ARQUITETURA<br />
+              E DESIGN<br />
+              
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

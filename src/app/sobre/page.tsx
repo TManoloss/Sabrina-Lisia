@@ -9,7 +9,7 @@ export default function SobrePage() {
       <section className="container-custom mb-16">
         <SectionTitle 
           subtitle="CONHEÇA A ARQUITETA"
-          title="Sobre Sabrina Lisia"
+          title="Sobre Sabrina Lísia"
           centered
         />
       </section>
@@ -92,6 +92,7 @@ export default function SobrePage() {
             <div className="w-12 h-12 bg-balaio-green text-white rounded-full mx-auto mb-4 flex items-center justify-center font-serif text-xl">
               1
             </div>
+            <h3 className="font-serif text-xl mb-2">Entendimento</h3>
             <p className="text-gray-600 text-sm">
               Entendemos suas necessidades, desejos e orçamento para o projeto.
             </p>
@@ -127,16 +128,16 @@ export default function SobrePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-balaio-green text-white py-16">
+      <section className=" py-16">
         <div className="container-custom text-center">
           <h2 className="font-serif text-4xl mb-6">
             Vamos Criar Algo Incrível Juntos?
           </h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-/90 max-w-2xl mx-auto">
             Entre em contato e descubra como podemos transformar seus sonhos em realidade.
           </p>
-          <Link href="/contato" className="btn-primary bg-white text-balaio-dark hover:bg-white/90">
-            Fale Conosco
+          <Link href="/contato" className="btn-primary text-lg px-12 py-4">
+            Fale conosco
           </Link>
         </div>
       </section>

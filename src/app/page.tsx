@@ -25,7 +25,7 @@ export default function HomePage() {
               SOBRE MIM
             </p>
             <h2 className="font-serif text-4xl md:text-5xl text-balaio-dark mb-4">
-              Sabrina Lisia
+              Sabrina Lísia
             </h2>
             <div className="w-24 h-0.5 bg-balaio-green mx-auto mt-6"></div>
           </div>
@@ -46,16 +46,16 @@ export default function HomePage() {
             {/* Texto Central */}
             <div className="text-center px-4 lg:px-8 order-1 lg:order-2">
               <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
-                Sou uma arquiteta e urbanista apaixonada por criar espaços que contam histórias. Acredito na <strong>importância de pensar a arquitetura para as pessoas</strong> e na criação de <strong>valores duradouros</strong> através de projetos integrados e personalizados.
+                Sou uma Designer de Interiores e Arquiteta  apaixonada por criar espaços que contam histórias. Acredito na <strong>importância de pensar a arquitetura para as pessoas</strong> e na criação de <strong>valores duradouros</strong> através de projetos integrados e personalizados.
               </p>
               <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
-                Junto minhas referências de paisagens naturais, artes plásticas, fotografia, cinema e música, até chegar a memórias afetivas e sensações táteis, visuais e olfativas para alcançar resultados mais criativos e eficientes.
+              Adoro transformar espaços em ambientes funcionais, acolhedores e cheios de personalidade, sempre buscando unir estética e conforto.
               </p>
               <p className="text-base md:text-lg text-gray-700 mb-8 leading-relaxed">
                 Minha missão é traduzir as necessidades e identidade dos meus clientes em <strong>projetos funcionais e únicos</strong>.
               </p>
               <p className="text-base md:text-lg text-gray-700 mb-8 leading-relaxed">
-                Atuo em três principais frentes: <strong>Residencial, Comercial/Corporativo e Institucional</strong>.
+                Atuo em principalmente na área de <strong>Design de Interiores</strong>.
               </p>
               <Link href="/sobre" className="btn-primary inline-block">
                 Saiba Mais
@@ -88,8 +88,8 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <SectionTitle 
-              subtitle="ÁREAS DE ATUAÇÃO"
-              title="Como Podemos Ajudar"
+              subtitle="ÁREAS QUE ATUO"
+              title="Como Posso Ajudar"
             />
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -136,7 +136,7 @@ export default function HomePage() {
         <div className="container-custom text-center">
           <h2 className="font-serif text-4xl md:text-5xl mb-6">
             Tem uma ideia?<br />
-            Traz pra gente!
+            Vamos conversar!
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Vamos elaborar uma proposta especial para você e transformar seus sonhos em realidade.

@@ -37,7 +37,7 @@ export default function Header() {
             <span className={`font-serif text-xl font-semibold hidden sm:block transition-all duration-500 ease-in-out ${
               isScrolled ? 'text-white' : 'text-balaio-dark'
             }`}>
-              Sabrina Lisia
+              Sabrina Lísia
             </span>
           </Link>
 
