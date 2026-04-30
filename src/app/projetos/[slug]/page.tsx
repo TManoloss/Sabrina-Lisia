@@ -14,6 +14,8 @@ export default function ProjetoPage() {
 
     const [selectedImg, setSelectedImg] = useState(0);
     const [showBeforeAfter, setShowBeforeAfter] = useState(false);
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [lightboxIndex, setLightboxIndex] = useState(0);
 
     useEffect(() => {
         const obs = new IntersectionObserver(
@@ -26,6 +28,36 @@ export default function ProjetoPage() {
         document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
         return () => obs.disconnect();
     }, [showBeforeAfter]);
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (!lightboxOpen) return;
+            if (e.key === "Escape") setLightboxOpen(false);
+            if (e.key === "ArrowLeft") prevLightboxImg();
+            if (e.key === "ArrowRight") nextLightboxImg();
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [lightboxOpen, lightboxIndex]);
+
+    const openLightbox = (index: number) => {
+        setLightboxIndex(index);
+        setLightboxOpen(true);
+        document.body.style.overflow = "hidden";
+    };
+
+    const closeLightbox = () => {
+        setLightboxOpen(false);
+        document.body.style.overflow = "auto";
+    };
+
+    const nextLightboxImg = () => {
+        setLightboxIndex((prev) => (prev + 1) % projeto!.images.length);
+    };
+
+    const prevLightboxImg = () => {
+        setLightboxIndex((prev) => (prev - 1 + projeto!.images.length) % projeto!.images.length);
+    };
 
     if (!projeto) {
         return (
@@ -43,7 +75,7 @@ export default function ProjetoPage() {
                 <Link href="/" className="projeto-back">
                     ← voltar
                 </Link>
-                <span className="projeto-header-brand">sabs</span>
+                <span className="projeto-header-brand">sabrina Lisia</span>
             </header>
 
             {/* Hero cover */}
@@ -91,7 +123,7 @@ export default function ProjetoPage() {
             {/* Antes e Depois Toggle */}
             {projeto.imagesAntes && projeto.imagesAntes.length > 0 && (
                 <div className="before-after-toggle-container reveal">
-                    <button 
+                    <button
                         className={`before-after-toggle-btn ${showBeforeAfter ? 'active' : ''}`}
                         onClick={() => setShowBeforeAfter(!showBeforeAfter)}
                     >
@@ -99,7 +131,7 @@ export default function ProjetoPage() {
                     </button>
                 </div>
             )}
- 
+
             {/* Antes e Depois Section */}
             {showBeforeAfter && projeto.imagesAntes && projeto.imagesAntes.length > 0 && (
                 <section className="before-after-section">
@@ -107,9 +139,9 @@ export default function ProjetoPage() {
                     <div className="before-after-grid">
                         {projeto.imagesAntes.map((beforeImg, i) => (
                             <div key={i} className="before-after-wrapper">
-                                <BeforeAfter 
-                                    before={beforeImg} 
-                                    after={projeto.images[i] || projeto.cover} 
+                                <BeforeAfter
+                                    before={beforeImg}
+                                    after={projeto.images[i] || projeto.cover}
                                 />
                             </div>
                         ))}
@@ -156,6 +188,7 @@ export default function ProjetoPage() {
                         <div
                             key={i}
                             className={`projeto-gallery-item reveal reveal-d${Math.min(i + 1, 3)}`}
+                            onClick={() => openLightbox(i)}
                         >
                             <Image
                                 src={img}
@@ -170,7 +203,7 @@ export default function ProjetoPage() {
             </section>
 
             {/* CTA */}
-            <section className="projeto-cta reveal">
+            {/* <section className="projeto-cta reveal">
                 <h2>Gostou deste projeto?</h2>
                 <p>
                     Entre em contato para conversarmos sobre como posso transformar sua
@@ -189,7 +222,7 @@ export default function ProjetoPage() {
                         ou envie um e-mail →
                     </Link>
                 </div>
-            </section>
+            </section> */}
 
             {/* Footer */}
             <footer className="site-footer">
@@ -209,6 +242,26 @@ export default function ProjetoPage() {
                     </div>
                 </div>
             </footer>
+
+            {/* Lightbox Modal */}
+            {lightboxOpen && (
+                <div className="lightbox-overlay" onClick={closeLightbox}>
+                    <button className="lightbox-close" onClick={closeLightbox}>×</button>
+                    <button className="lightbox-nav lightbox-prev" onClick={(e) => { e.stopPropagation(); prevLightboxImg(); }}>
+                        ‹
+                    </button>
+                    <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+                        <img
+                            src={projeto.images[lightboxIndex]}
+                            alt={`${projeto.name} — ampliada`}
+                            className="lightbox-img"
+                        />
+                    </div>
+                    <button className="lightbox-nav lightbox-next" onClick={(e) => { e.stopPropagation(); nextLightboxImg(); }}>
+                        ›
+                    </button>
+                </div>
+            )}
         </>
     );
 }

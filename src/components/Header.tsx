@@ -12,9 +12,9 @@ export default function Header({ scrolled, menuOpen, setMenuOpen, goTo }: Header
         <>
             <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
                 <nav className="nav-left">
-                    <a href="#projetos" onClick={(e) => { e.preventDefault(); goTo("projetos"); }}>projetos</a>
                     <a href="#sobre" onClick={(e) => { e.preventDefault(); goTo("sobre"); }}>sobre</a>
-                    <a href="#contato" onClick={(e) => { e.preventDefault(); goTo("contato"); }}>contato</a>
+                    <a href="#projetos" onClick={(e) => { e.preventDefault(); goTo("projetos"); }}>projetos</a>
+
                 </nav>
                 <nav className="nav-right">
                     <a href="https://www.instagram.com/sabsz.l/" target="_blank" rel="noopener noreferrer">instagram</a>

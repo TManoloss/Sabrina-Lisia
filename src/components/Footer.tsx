@@ -7,14 +7,11 @@ export default function Footer() {
                     <div className="footer-col">
                         <span className="footer-label">Navegação</span>
                         <a href="#sobre">Sobre</a>
-                        <a href="#projetos">Projetos</a>
-                        <a href="#contato">Contato</a>
-                    </div>
+                        <a href="#projetos">Projetos</a>                    </div>
                     <div className="footer-col">
                         <span className="footer-label">Social</span>
                         <a href="https://www.instagram.com/sabsz.l/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                        <a href="#" target="_blank">Pinterest</a>
-                        <a href="#" target="_blank">LinkedIn</a>
+
                     </div>
                     <div className="footer-col">
                         <span className="footer-label">Contato</span>
