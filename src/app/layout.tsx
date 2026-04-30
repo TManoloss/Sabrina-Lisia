@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Comfortaa } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const bauhaus = localFont({
   src: "../../public/fontes/bauhaus-93/Bauhaus 93 Regular.ttf",
@@ -42,7 +43,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${bauhaus.variable} ${comfortaa.variable}`} suppressHydrationWarning>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

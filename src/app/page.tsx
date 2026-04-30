@@ -69,7 +69,6 @@ export default function Home() {
       />
       <Projects projetos={projetos} />
 
-      <Footer />
     </>
   );
 }

@@ -224,7 +224,7 @@ export default function ProjetoPage() {
                 </div>
             </section> */}
 
-            {/* Footer */}
+            {/* Footer
             <footer className="site-footer">
                 <div className="footer-inner">
                     <span>© 2024 SABS Arquitetura</span>
@@ -241,7 +241,7 @@ export default function ProjetoPage() {
                         <a href="mailto:biniinha27@gmail.com">biniinha27@gmail.com</a>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
 
             {/* Lightbox Modal */}
             {lightboxOpen && (
