@@ -10,6 +10,7 @@
   --cream: #D2C9BF;
   /* Pebble (Pantone 14-4005 TCX) */
   --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --section-padding: 10rem;
 }
 
 * {
@@ -134,7 +135,7 @@ img {
 
 /* ========== HERO ========== */
 .hero-section {
-  padding: 8rem 3rem 2rem;
+  padding: 8rem 3rem calc(var(--section-padding) / 2);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -204,8 +205,7 @@ img {
   display: flex;
   align-items: baseline;
   gap: 1rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 1rem;
 }
 
 .caption-num {
@@ -236,7 +236,7 @@ img {
 
 /* ========== ABOUT BRAND ========== */
 .about-brand {
-  padding: 0 3rem 6rem;
+  padding: calc(var(--section-padding) / 2) 3rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -330,10 +330,9 @@ img {
 
 /* ========== NEW IN ========== */
 .new-in {
-  padding: 4rem 3rem 6rem;
+  padding: calc(var(--section-padding) / 2) 3rem;
   max-width: 1400px;
   margin: 0 auto;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .new-in-header {
@@ -415,7 +414,7 @@ img {
 
 /* ========== ABOUT US ========== */
 .about-us {
-  padding: 6rem 3rem 4rem;
+  padding: calc(var(--section-padding) / 2) 3rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -523,7 +522,6 @@ img {
 .tools-section {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .tools-label {
@@ -576,7 +574,7 @@ img {
   height: 40vh;
   min-height: 250px;
   overflow: hidden;
-  margin: 4rem 0;
+  padding: calc(var(--section-padding) / 2) 0;
 }
 
 .banner-solid {
@@ -624,7 +622,7 @@ img {
 
 /* ========== FEATURED ========== */
 .featured {
-  padding: 6rem 3rem 8rem;
+  padding: calc(var(--section-padding) / 2) 3rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -701,7 +699,7 @@ img {
 /* ========== NEWSLETTER ========== */
 .newsletter {
   background: var(--primary);
-  padding: 5rem 3rem;
+  padding: calc(var(--section-padding) / 2) 3rem;
 }
 
 .newsletter-inner {
@@ -792,8 +790,7 @@ img {
 .site-footer {
   background: #BCD5EA;
   color: var(--primary);
-  padding: 6rem 3rem 3rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: calc(var(--section-padding) / 2) 3rem 3rem;
 }
 
 .footer-top {
