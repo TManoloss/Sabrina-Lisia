@@ -12,14 +12,14 @@ export default function Footer() {
                     </div>
                     <div className="footer-col">
                         <span className="footer-label">Social</span>
-                        <a href="https://www.instagram.com/sabs.arq/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.instagram.com/sabsz.l/" target="_blank" rel="noopener noreferrer">Instagram</a>
                         <a href="#" target="_blank">Pinterest</a>
                         <a href="#" target="_blank">LinkedIn</a>
                     </div>
                     <div className="footer-col">
                         <span className="footer-label">Contato</span>
-                        <a href="mailto:contato@sabrinalisisa.com.br">contato@sabrinalisisa.com.br</a>
-                        <a href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
+                        <a href="mailto:biniinha27@gmail.com">biniinha27@gmail.com</a>
+                        <a href="https://wa.me/5544998472027" target="_blank">WhatsApp</a>
                     </div>
                 </div>
             </div>

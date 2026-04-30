@@ -178,7 +178,7 @@ export default function ProjetoPage() {
                 </p>
                 <div className="projeto-cta-links">
                     <a
-                        href="https://wa.me/5511999999999"
+                        href="https://wa.me/5544998472027"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="projeto-cta-btn"
@@ -197,7 +197,7 @@ export default function ProjetoPage() {
                     <span>© 2024 SABS Arquitetura</span>
                     <div className="footer-links">
                         <a
-                            href="https://www.instagram.com/sabs.arq/"
+                            href="https://www.instagram.com/sabsz.l/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -205,7 +205,7 @@ export default function ProjetoPage() {
                         </a>
                         <a href="#">Pinterest</a>
                         <a href="#">LinkedIn</a>
-                        <a href="mailto:contato@sabs.arq.br">contato@sabs.arq.br</a>
+                        <a href="mailto:biniinha27@gmail.com">biniinha27@gmail.com</a>
                     </div>
                 </div>
             </footer>

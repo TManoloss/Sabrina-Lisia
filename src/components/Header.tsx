@@ -17,8 +17,8 @@ export default function Header({ scrolled, menuOpen, setMenuOpen, goTo }: Header
                     <a href="#contato" onClick={(e) => { e.preventDefault(); goTo("contato"); }}>contato</a>
                 </nav>
                 <nav className="nav-right">
-                    <a href="https://www.instagram.com/sabs.arq/" target="_blank" rel="noopener noreferrer">instagram</a>
-                    <a href="mailto:contato@sabs.arq.br">e-mail</a>
+                    <a href="https://www.instagram.com/sabsz.l/" target="_blank" rel="noopener noreferrer">instagram</a>
+                    <a href="mailto:biniinha27@gmail.com">e-mail</a>
                 </nav>
                 <button
                     className="mobile-menu-btn"

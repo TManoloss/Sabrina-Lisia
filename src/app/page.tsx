@@ -62,6 +62,7 @@ export default function Home() {
     <>
       <Header scrolled={scrolled} menuOpen={menuOpen} setMenuOpen={setMenuOpen} goTo={goTo} />
       <Hero />
+      <div className="smooth-divider reveal" />
       <About goTo={goTo} />
       <Banner
         text="Cada projeto é único — assim como quem o habita"

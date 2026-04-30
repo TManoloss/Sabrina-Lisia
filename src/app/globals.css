@@ -234,6 +234,23 @@ img {
   color: var(--text-light);
 }
 
+/* ========== SMOOTH DIVIDER ========== */
+.smooth-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(105, 60, 76, 0.15), transparent);
+  max-width: 1000px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: scaleX(0.9);
+  transition: opacity 1.5s ease, transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.smooth-divider.visible {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
 /* ========== ABOUT BRAND ========== */
 .about-brand {
   padding: calc(var(--section-padding) / 2) 3rem;

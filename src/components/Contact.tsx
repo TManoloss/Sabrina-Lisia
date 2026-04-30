@@ -16,7 +16,7 @@ export default function Contact() {
                         <button type="submit">Enviar</button>
                     </form>
                     <a
-                        href="https://wa.me/5511999999999"
+                        href="https://wa.me/5544998472027"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="whatsapp-link"
