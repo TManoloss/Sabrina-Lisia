@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getProjetoBySlug, ProjetoData } from "@/data/projetos";
+import BeforeAfter from "@/components/BeforeAfter";
 
 export default function ProjetoPage() {
     const params = useParams();
@@ -12,6 +13,7 @@ export default function ProjetoPage() {
     const projeto = getProjetoBySlug(slug);
 
     const [selectedImg, setSelectedImg] = useState(0);
+    const [showBeforeAfter, setShowBeforeAfter] = useState(false);
 
     useEffect(() => {
         const obs = new IntersectionObserver(
@@ -23,7 +25,7 @@ export default function ProjetoPage() {
         );
         document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
         return () => obs.disconnect();
-    }, []);
+    }, [showBeforeAfter]);
 
     if (!projeto) {
         return (
@@ -85,6 +87,35 @@ export default function ProjetoPage() {
                     </button>
                 ))}
             </section>
+
+            {/* Antes e Depois Toggle */}
+            {projeto.imagesAntes && projeto.imagesAntes.length > 0 && (
+                <div className="before-after-toggle-container reveal">
+                    <button 
+                        className={`before-after-toggle-btn ${showBeforeAfter ? 'active' : ''}`}
+                        onClick={() => setShowBeforeAfter(!showBeforeAfter)}
+                    >
+                        {showBeforeAfter ? "Esconder Antes e Depois" : "Ver Antes e Depois"}
+                    </button>
+                </div>
+            )}
+ 
+            {/* Antes e Depois Section */}
+            {showBeforeAfter && projeto.imagesAntes && projeto.imagesAntes.length > 0 && (
+                <section className="before-after-section">
+                    <h2 className="projeto-section-title reveal">Antes & Depois</h2>
+                    <div className="before-after-grid">
+                        {projeto.imagesAntes.map((beforeImg, i) => (
+                            <div key={i} className="before-after-wrapper">
+                                <BeforeAfter 
+                                    before={beforeImg} 
+                                    after={projeto.images[i] || projeto.cover} 
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            )}
 
             {/* Content */}
             <section className="projeto-content">

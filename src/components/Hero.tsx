@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <section className="hero-section">
-            <h1 className="hero-brand">sabs</h1>
+            <h1 className="hero-brand">Sabrina Lisia - arquitetura e interiores</h1>
 
             <div className="hero-images reveal">
                 <div className="hero-img-wrap hero-img-1">
@@ -33,13 +33,13 @@ export default function Hero() {
                     <span className="caption-num">001</span>
                     <span className="caption-dot" />
                     <span className="caption-text">Suíte Freijó</span>
-                    <span className="caption-price">São Paulo, SP</span>
+                    <span className="caption-price">Curso Render Class 2025</span>
                 </div>
                 <div className="hero-caption">
                     <span className="caption-num">002</span>
                     <span className="caption-dot" />
-                    <span className="caption-text">Sala Praia</span>
-                    <span className="caption-price">Litoral de SP</span>
+                    <span className="caption-text">Sala da Praia</span>
+                    <span className="caption-price">Curso Render Class 2025</span>
                 </div>
             </div>
         </section>

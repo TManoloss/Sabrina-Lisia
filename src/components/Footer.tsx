@@ -1,14 +1,31 @@
 export default function Footer() {
     return (
         <footer className="site-footer">
-            <div className="footer-inner">
-                <span>© 2024 SABS Arquitetura</span>
-                <div className="footer-links">
-                    <a href="https://www.instagram.com/sabs.arq/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <a href="#">Pinterest</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="mailto:contato@sabs.arq.br">contato@sabs.arq.br</a>
+            <div className="footer-top">
+                <h2 className="footer-logo">Sabrina Lisia</h2>
+                <div className="footer-grid">
+                    <div className="footer-col">
+                        <span className="footer-label">Navegação</span>
+                        <a href="#sobre">Sobre</a>
+                        <a href="#projetos">Projetos</a>
+                        <a href="#contato">Contato</a>
+                    </div>
+                    <div className="footer-col">
+                        <span className="footer-label">Social</span>
+                        <a href="https://www.instagram.com/sabs.arq/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="#" target="_blank">Pinterest</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                    </div>
+                    <div className="footer-col">
+                        <span className="footer-label">Contato</span>
+                        <a href="mailto:contato@sabrinalisisa.com.br">contato@sabrinalisisa.com.br</a>
+                        <a href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
+                    </div>
                 </div>
+            </div>
+            <div className="footer-bottom">
+                <span>© {new Date().getFullYear()} Sabrina Lisia — Todos os direitos reservados.</span>
+                <span>Arquitetura & Interiores</span>
             </div>
         </footer>
     );

@@ -5,7 +5,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
-import AboutMe from "@/components/AboutMe";
 import Banner from "@/components/Banner";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Contact from "@/components/Contact";
@@ -20,13 +19,17 @@ const projetos = projetosData.map((p) => ({
   ano: p.ano,
 }));
 
-const destaques = projetosData.map((p) => ({
-  slug: p.slug,
-  img: p.cover,
-  name: p.name,
-  desc: p.descricaoCurta,
-  local: `${p.local} · ${p.ano}`,
-}));
+const featuredSlugs = ["suite-freijo", "escritorio-jeanine", "area-externa-felipe", "suite-vanessa"];
+const destaques = featuredSlugs.map(slug => {
+  const p = projetosData.find(item => item.slug === slug)!;
+  return {
+    slug: p.slug,
+    img: p.cover,
+    name: p.name,
+    desc: p.descricaoCurta,
+    local: `${p.local} · ${p.ano}`,
+  };
+});
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -60,15 +63,11 @@ export default function Home() {
       <Header scrolled={scrolled} menuOpen={menuOpen} setMenuOpen={setMenuOpen} goTo={goTo} />
       <Hero />
       <About goTo={goTo} />
-      <Projects projetos={projetos} />
-      <AboutMe />
       <Banner
-        src="/images/carrocel/3.png"
-        alt="Projeto paisagístico"
         text="Cada projeto é único — assim como quem o habita"
       />
-      <FeaturedProjects destaques={destaques} />
-      <Contact />
+      <Projects projetos={projetos} />
+
       <Footer />
     </>
   );

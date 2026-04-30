@@ -1,34 +1,34 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import localFont from "next/font/local";
+import { Comfortaa } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const bauhaus = localFont({
+  src: "../../public/fontes/bauhaus-93/Bauhaus 93 Regular.ttf",
   variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
-const inter = Inter({
+const comfortaa = Comfortaa({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "SABS | Designer de Interiores",
+  title: "Sabrina Lisia | Arquiteta & Interiores",
   description:
-    "Portfólio de design de interiores por Sabrina. Transformo ambientes em experiências únicas, onde cada detalhe reflete a essência de quem habita.",
+    "Portfólio de arquitetura e design de interiores por Sabrina Lisia. Transformo ambientes em experiências únicas, onde cada detalhe reflete a essência de quem habita.",
   keywords: [
     "arquitetura",
     "design de interiores",
     "projetos residenciais",
     "decoração",
-    "SABS",
+    "Sabrina Lisia",
   ],
   openGraph: {
-    title: "SABS | Designer de Interiores",
+    title: "Sabrina Lisia | Arquiteta & Interiores",
     description:
       "Transformo ambientes em experiências únicas, onde cada detalhe reflete a essência de quem habita.",
     type: "website",
@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${playfair.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html lang="pt-BR" className={`${bauhaus.variable} ${comfortaa.variable}`} suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );

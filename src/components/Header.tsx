@@ -14,7 +14,6 @@ export default function Header({ scrolled, menuOpen, setMenuOpen, goTo }: Header
                 <nav className="nav-left">
                     <a href="#projetos" onClick={(e) => { e.preventDefault(); goTo("projetos"); }}>projetos</a>
                     <a href="#sobre" onClick={(e) => { e.preventDefault(); goTo("sobre"); }}>sobre</a>
-                    <a href="#sobre-mim" onClick={(e) => { e.preventDefault(); goTo("sobre-mim"); }}>sobre mim</a>
                     <a href="#contato" onClick={(e) => { e.preventDefault(); goTo("contato"); }}>contato</a>
                 </nav>
                 <nav className="nav-right">
@@ -35,7 +34,6 @@ export default function Header({ scrolled, menuOpen, setMenuOpen, goTo }: Header
                 <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}>Início</a>
                 <a href="#projetos" onClick={(e) => { e.preventDefault(); goTo("projetos"); }}>Projetos</a>
                 <a href="#sobre" onClick={(e) => { e.preventDefault(); goTo("sobre"); }}>Sobre</a>
-                <a href="#sobre-mim" onClick={(e) => { e.preventDefault(); goTo("sobre-mim"); }}>Sobre Mim</a>
                 <a href="#contato" onClick={(e) => { e.preventDefault(); goTo("contato"); }}>Contato</a>
             </div>
         </>
