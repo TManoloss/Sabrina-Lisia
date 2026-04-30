@@ -154,6 +154,16 @@ img {
   animation: fadeUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
 }
 
+.hero-subtitle {
+  display: block;
+  font-size: 0.4em;
+  font-family: var(--font-body), sans-serif;
+  text-transform: lowercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -238,7 +248,7 @@ img {
 .smooth-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(105, 60, 76, 0.15), transparent);
+  background: linear-gradient(to right, transparent, #BCD5EA, transparent);
   max-width: 1000px;
   margin: 0 auto;
   opacity: 0;
@@ -260,7 +270,8 @@ img {
 
 .about-brand-label {
   font-size: 0.65rem;
-  color: var(--text-muted);
+  color: #BCD5EA;
+  font-weight: 600;
   letter-spacing: 0.1em;
   margin-bottom: 1.5rem;
 }

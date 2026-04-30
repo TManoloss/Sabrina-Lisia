@@ -3,7 +3,10 @@ import Image from "next/image";
 export default function Hero() {
     return (
         <section className="hero-section">
-            <h1 className="hero-brand">Sabrina Lisia - arquitetura e interiores</h1>
+            <h1 className="hero-brand">
+                Sabrina Lisia <br />
+                <span className="hero-subtitle">arquitetura e interiores</span>
+            </h1>
 
             <div className="hero-images reveal">
                 <div className="hero-img-wrap hero-img-1">
