@@ -65,7 +65,7 @@ export default function Home() {
       <div className="smooth-divider reveal" />
       <About goTo={goTo} />
       <Banner
-        text="Cada projeto é único — assim como quem o habita"
+        text='"Cada projeto é único — assim como quem o habita"'
       />
       <Projects projetos={projetos} />
 
